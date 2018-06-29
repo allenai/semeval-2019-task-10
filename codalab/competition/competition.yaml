@@ -1,0 +1,93 @@
+title: SemEval 2019, Task 10 -- Math Question Answering
+description: Evaluates question answering systems on their ability to solve Math SAT questions.
+image: semeval-logo.png
+has_registration: True
+allow_teams: True
+html:
+    overview: overview.html
+    evaluation: evaluation.html
+    terms: terms_and_conditions.html
+    data: data.html
+phases:
+    1:
+        phasenumber: 1
+        label: "Trial"
+        description: A handful of train/dev questions are provided as examples.
+        start_date: 2018-06-26
+        max_submissions: 999
+        scoring_program: scoring_program.zip
+        reference_data: dev_data.zip
+        leaderboard_management_mode: default
+    2:
+        phasenumber: 2
+        label: "Practice"
+        description: The full training and development set are provided for system hillclimbing.
+        start_date: 2018-09-17
+        max_submissions: 999
+        scoring_program: scoring_program.zip
+        reference_data: dev_data.zip
+        leaderboard_management_mode: default
+    3:
+        phasenumber: 3
+        label: "Evaluation"
+        description: The competition's test set is now available.
+        start_date: 2019-01-10
+        max_submissions: 1
+        scoring_program: scoring_program.zip
+        reference_data: test_data.zip
+        leaderboard_management_mode: hide_results
+    4:
+        phasenumber: 4
+        label: "Post-Evaluation"
+        description: Although the main evaluation phase is now closed, interested competitors may continue to submit their best system results to the post-evaluation leaderboard.
+        start_date: 2019-01-24
+        max_submissions: 999
+        scoring_program: scoring_program.zip
+        reference_data: test_data.zip
+        leaderboard_management_mode: default
+leaderboard:
+  columns:
+    accuracy:
+      label: Accuracy (overall)
+      leaderboard: &id001
+        label: Results
+        rank: 1
+      rank: 1
+      sort: desc
+    closed_accuracy:
+      label: Accuracy (closed)
+      leaderboard: *id001
+      rank: 2
+      sort: desc
+    open_accuracy:
+      label: Accuracy (open)
+      leaderboard: *id001
+      rank: 3
+      sort: desc
+    geo_accuracy:
+      label: Accuracy (geo)
+      leaderboard: *id001
+      rank: 4
+      sort: desc
+    penalized_accuracy:
+      label: Penalized Accuracy (overall)
+      leaderboard: *id001
+      rank: 5
+      sort: desc
+    closed_penalized_accuracy:
+      label: Penalized Accuracy (closed)
+      leaderboard: *id001
+      rank: 6
+      sort: desc
+    open_penalized_accuracy:
+      label: Penalized Accuracy (open)
+      leaderboard: *id001
+      rank: 7
+      sort: desc
+    geo_penalized_accuracy:
+      label: Penalized Accuracy (geo)
+      leaderboard: *id001
+      rank: 8
+      sort: desc
+  leaderboards:
+    Results: *id001

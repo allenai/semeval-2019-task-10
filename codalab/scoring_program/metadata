@@ -1,0 +1,2 @@
+command: python $program/scoring.py $input $output
+description: Example competition evaluation program.

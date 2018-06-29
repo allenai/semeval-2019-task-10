@@ -1,0 +1,32 @@
+<h2>Task 10: Math Question Answering</h2>
+<h3>Organizers</h3>
+<p>Mark Hopkins, Ronan Le Bras, Cristian Petrescu-Prahova, Gabriel Stanovsky (Allen Institute for Artificial Intelligence), Hannaneh Hajishirzi, Rik Koncel-Kedziorski (University of Washington)</p>
+<h3>Mailing List</h3>
+<p><a href="https://groups.google.com/forum/#!forum/semeval-2019-task-10"><em>semeval-2019-task-10@googlegroups.com</em></a>&nbsp;</p>
+<h3>Key Dates</h3>
+<ul>
+<li><strong>20 Aug 2018</strong>: CodaLab competition website ready and made public. Should include basic task description and mailing group information for the task. Trial data ready. Evaluation script ready for participants to download and run on the trial data.</li>
+<li><span><span><strong>17 Sep 2018</strong>: Training data ready. Development data ready. CodaLab competition website updated to include an evaluation script uploaded as part of the competition so that participants can upload submissions on the development set and the script immediately checks the submission for format and computes the results on the development set. This is also the date by which a benchmark system should be made available to participants. Also, the organizers should run the submission created with the benchmark system on CodaLab, so that participants can see its results on the LeaderBoard.</span></span></li>
+<li><span><strong>10 Jan 2019</strong>: Evaluation start</span></li>
+<li><span><span><strong>24 Jan 2019</strong>: Evaluation end</span></span></li>
+<li><span><span><span><strong>05 Feb 2019</strong>: Results posted</span></span></span></li>
+<li><span><strong>28 Feb 2019</strong>: System and Task description paper submissions due by 23:59 GMT -12:00</span></li>
+<li><span><span><strong>14 Mar 2019</strong>: Paper reviews due (for both systems and tasks)</span></span></li>
+<li><span><strong>06 Apr 2019</strong>: Author notifications</span></li>
+<li><span><span><strong>20 Apr 2019</strong>: Camera ready submissions due</span></span></li>
+<li><span><strong>Summer 2019</strong>: SemEval 2019</span></li>
+</ul>
+<h3>Task Overview</h3>
+<p>Over the past four years, there has been a surge of interest in math question answering. In this SemEval task, we provide the opportunity for math QA systems to test themselves against a benchmark designed to evaluate high school students: The Math SAT (short for Scholastic Achievement Test).</p>
+<p>The training and test data consists of <strong>unabridged</strong> practice exams from various study guides, for the (now retired) exam format administered from 2005 to 2016. We have tagged questions into three broad categories:</p>
+<ul>
+<li><strong>Closed-vocabulary algebra</strong>, e.g. "Suppose 3x + y = 15, where x is a positive integer. What is the difference between the largest possible value of y and the smallest possible value of x, assuming that y is also a positive integer?"</li>
+<li><strong>Open-vocabulary algebra</strong>, e.g. "At a basketball tournament involving 8 teams, each team played 4 games with each of the other teams. How many games were played at this tournament?"</li>
+<li><strong>Geometry</strong>, e.g. "The lengths of two sides of a triangle are (x-2) and (x+2), where x &gt; 2. Which of the following ranges includes all and only the possible values of the third side y?"</li>
+</ul>
+<p>A majority of the questions are 5-way multiple choice, and a minority have a numeric answer. Only the Geometry subset contains diagrams.</p>
+<p>We are planning to provide 3000-4000 training questions, and a test set of over 1000 questions. Questions are stored as JSON, using LaTeX to encode mathematical formatting.</p>
+<pre>{<br />  <span>"id"</span>: <span>846</span>,<br />  <span>"exam"</span>: <span>"source4"</span>,<br />  <span>"sectionNumber"</span>: <span>2</span>,<br />  <span>"sectionLength"</span>: <span>20</span>,<br />  <span>"originalQuestionNumber"</span>: <span>18</span>,<br />  <span>"question"</span>: <span>"In the figure above, if the slope of line l is </span><span>\\</span><span>(-</span><span>\\</span><span>frac{3}{2}</span><span>\\</span><span>), what is the area of triangle AOB?"</span>,<br />  <span>"answer"</span>: <span>"E"</span>,<br />  <span>"choices"</span>: {<br />    <span>"E"</span>: <span>"12"</span>,<br />    <span>"A"</span>: <span>"24"</span>,<br />    <span>"B"</span>: <span>"18"</span>,<br />    <span>"C"</span>: <span>"16"</span>,<br />    <span>"D"</span>: <span>"14"<br /></span>  },<br />  <span>"diagramRef"</span>: <span>"diagram250.png"</span>,<br />  <span>"tags"</span>: [<span>"geometry"</span>]<br />}</pre>
+<p>Additionally, we will provide gold logical forms for a majority of the training questions in the Closed Algebra track. These logical forms are the same language used in the paper:&nbsp;</p>
+<p style="padding-left: 30px;"><strong>Hopkins, M., Petrescu-Prahova, C., Levin, R., Le Bras, R., Herrasti, A., &amp; Joshi, V. (2017). Beyond sentential semantic parsing: Tackling the math sat with a cascade of tree transducers. In&nbsp;<em>Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing</em></strong><span><strong>&nbsp;(pp. 795-804)</strong>. </span></p>
+<p><span>We will also be providing documentation and an interpreter for the logical form language. Competitors are free to ignore the provided logical forms if desired.&nbsp; Competitors will also be free to use additional publicly available math training questions, like AQuA or MAWPS; we ask only that competitors refrain from using additional Math SAT questions found on the web or elsewhere, to avoid potential train/test overlap.</span></p>
