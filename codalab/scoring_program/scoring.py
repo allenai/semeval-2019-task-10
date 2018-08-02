@@ -14,15 +14,25 @@ def isNumeric(string):
     
 
 def readAnswersFromJson(filename, tag=None):
-    with open(filename) as f:
-        data = json.load(f)
+    try:
+        with open(filename) as f:
+            data = json.load(f)
+    except ValueError:
+        sys.exit('File {} not in valid JSON format'.format(filename))
     answers = dict()
     for i in range(len(data)):
         datum = data[i]
-        if tag is None:
-            answers[datum['id']] = datum['answer']
-        elif tag in datum['tags']:
-            answers[datum['id']] = datum['answer']
+        try:
+            if tag is None:
+                if datum['id'] != int(datum['id']):
+                    sys.exit('Value of "id" slot must be integer: {}'.format(datum))
+                if datum['answer'] != str(datum['answer']):
+                    sys.exit('Value of "answer" slot must be string: {}'.format(datum))
+                answers[datum['id']] = datum['answer']
+            elif tag in datum['tags']:
+                answers[datum['id']] = datum['answer']
+        except Exception:
+            sys.exit('Datum missing proper keys: {}'.format(datum))
     return answers
 
 def isCorrect(gold, candidate, margin_of_error = 0.01):
