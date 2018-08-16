@@ -19,6 +19,9 @@ semeval-2019-task-10@googlegroups.com
 - 20 Apr 2019: Camera ready submissions due
 - Summer 2019: SemEval 2019
 
+### Quickstart
+Go [here](https://github.com/allenai/semeval-2019-task-10/blob/master/docs/gettingStarted.md) to get started.
+
 ### Task Overview
 
 Over the past four years, there has been a surge of interest in math question answering. In this SemEval task, we provide the opportunity for math QA systems to test themselves against a benchmark designed to evaluate high school students: The Math SAT (short for Scholastic Achievement Test).
