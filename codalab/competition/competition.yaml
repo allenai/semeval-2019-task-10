@@ -22,7 +22,7 @@ phases:
         phasenumber: 2
         label: "Practice"
         description: The full training and development set are provided for system hillclimbing.
-        start_date: 2018-09-17
+        start_date: 2018-08-17
         max_submissions: 999
         scoring_program: scoring_program.zip
         reference_data: dev_data.zip
