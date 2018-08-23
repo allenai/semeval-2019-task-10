@@ -7,7 +7,7 @@ The following is a quickstart guide for Task 10:
   - Training diagrams: `data/diagrams/diagrams.train.tar.gz`
   - Development data: `data/sat.dev.json`
   - Development diagrams: `data/diagrams/diagrams.dev.tar.gz`
-3. Create a program that can take `data/sat.dev.json` as input and output a list of JSON datum `{ id: <id>, response: "<response>"}`, where `<id>` is the integer index of a question and `<response>` is the guessed response (either a choice key or a numeric string). An example program is provided in the repo at `baselines/guesser.py`. Run `python baselines/guesser.py data/sat.dev.json answer.json b-guesser`. This program will guess "B" for every multiple choice question (and abstain from direct answer questions). The output is stored in `answer.json'.
+3. Create a program that can take `data/sat.dev.json` as input and output a list of JSON datum `{ id: <id>, answer: "<answer>"}`, where `<id>` is the integer index of a question and `<answer>` is the guessed answer (either a choice key or a numeric string). An example program is provided in the repo at `baselines/guesser.py`. Run `python baselines/guesser.py data/sat.dev.json answer.json b-guesser`. This program will guess "B" for every multiple choice question (and abstain from direct answer questions). The output is stored in `answer.json'.
 4. Create a CodaLab submission file:
 ```
 zip submission.zip answer.json 
