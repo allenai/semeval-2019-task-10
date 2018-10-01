@@ -21,6 +21,8 @@ zip submission.zip answer.json
 6. You can then wait until the status of your submission says Completed (you will likely need to click the Refresh Status button or refresh your browser to force a status change).
 7. Your scores should become visible and you are given the option to submit your result to the leaderboard.
 
+To use the gold logical forms and the logical form interpreter, see the following [page](https://github.com/allenai/semeval-2019-task-10/tree/master/interpreter).
+
 
 
   
