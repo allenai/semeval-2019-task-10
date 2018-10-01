@@ -1,0 +1,31 @@
+[
+    {
+        "id": 10000,
+        "logicalForm": [
+            "(assert (Strategy \"CheckUnsatisfiable\"))",
+            "(assert (= (- a 5) 0))",
+            "(assert (Not (= ?_id_7_8 (+ a 5))))",
+            "(assert (MenuItem \"A\" (- 0 10)))",
+            "(assert (MenuItem \"B\" (- 0 5)))",
+            "(assert (MenuItem \"C\" 0))",
+            "(assert (MenuItem \"D\" 5))",
+            "(assert (MenuItem \"E\" 10))"
+        ]
+    },
+    {
+        "id": 10011,
+        "logicalForm": [
+            "(assert (Strategy \"CheckUnsatisfiable\"))",
+            "(assert (= 14 (+ x (* 2 y))))",
+            "(assert (= _id_22_26 x))",
+            "(assert (= y (+ z 2)))",
+            "(assert (= z 4))",
+            "(assert (Not (= ?_id_20_21 _id_22_26)))",
+            "(assert (MenuItem \"A\" 2))",
+            "(assert (MenuItem \"B\" 4))",
+            "(assert (MenuItem \"C\" 6))",
+            "(assert (MenuItem \"D\" 8))",
+            "(assert (MenuItem \"E\" 10))"
+        ]
+    }
+]
