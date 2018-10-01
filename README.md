@@ -2,14 +2,12 @@
 
 ### Organizers
 
-Mark Hopkins, Ronan Le Bras, Cristian Petrescu-Prahova, Gabriel Stanovsky (Allen Institute for Artificial Intelligence), Hannaneh Hajishirzi, Rik Koncel-Kedziorski (University of Washington)
+Mark Hopkins (Reed College), Ronan Le Bras (Allen Institute for Artificial Intelligence), Cristian Petrescu-Prahova, Gabriel Stanovsky (Allen Institute for Artificial Intelligence), Hannaneh Hajishirzi (University of Washington), Rik Koncel-Kedziorski (University of Washington)
 
 ### Mailing List
 semeval-2019-task-10@googlegroups.com 
 
 ### Key Dates
-- 20 Aug 2018: CodaLab competition website ready and made public. Should include basic task description and mailing group information for the task. Trial data ready. Evaluation script ready for participants to download and run on the trial data.
-- 17 Sep 2018: Training data ready. Development data ready. CodaLab competition website updated to include an evaluation script uploaded as part of the competition so that participants can upload submissions on the development set and the script immediately checks the submission for format and computes the results on the development set. This is also the date by which a benchmark system should be made available to participants. Also, the organizers should run the submission created with the benchmark system on CodaLab, so that participants can see its results on the LeaderBoard.
 - 10 Jan 2019: Evaluation start
 - 24 Jan 2019: Evaluation end
 - 05 Feb 2019: Results posted
@@ -21,6 +19,10 @@ semeval-2019-task-10@googlegroups.com
 
 ### Quickstart
 Go [here](https://github.com/allenai/semeval-2019-task-10/blob/master/docs/gettingStarted.md) to get started.
+
+### The CodaLab competition page
+
+[https://competitions.codalab.org/competitions/20013]
 
 ### Task Overview
 
@@ -35,7 +37,7 @@ A majority of the questions are 5-way multiple choice, and a minority have a num
 
 ### Provided Datasets
 
-We will provide over 2500 training questions, 500 development questions, and 1000 test questions, all derived from Math SAT study guides. Questions are stored as JSON, using LaTeX to encode mathematical formatting.
+We provide over 2200 training questions, 500 development questions, and 1000 test questions, all derived from Math SAT study guides. Questions are stored as JSON, using LaTeX to encode mathematical formatting.
 
 ```
 {
@@ -62,12 +64,16 @@ For more details on the JSON data format, please visit [this page](https://githu
 
 ### Gold Logical Forms
 
-Additionally, we will provide gold logical forms for a majority of the training questions in the Closed Algebra track. These logical forms are the same language used in the paper: 
+Additionally, we provide gold logical forms for a majority of the training questions in the Closed Algebra track. These logical forms are the same language used in the paper: 
 
 Hopkins, M., Petrescu-Prahova, C., Levin, R., Le Bras, R., Herrasti, A., & Joshi, V. (2017). Beyond sentential semantic parsing: Tackling the math sat with a cascade of tree transducers. In Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing (pp. 795-804). [(pdf)](https://pdfs.semanticscholar.org/c22a/240d1087603664826e9aab809273ed9bff15.pdf?_ga=2.52187753.1130679049.1530133172-566539276.1446829155&_gac=1.6555398.1527028246.EAIaIQobChMI9YuywK-a2wIVlcBkCh0WKw_kEAAYASAAEgKwgPD_BwE)
 
 The logical form language is described [here](https://github.com/allenai/semeval2019-task10/blob/master/docs/logicalFormLanguage.md).
 Competitors are free to ignore the provided logical forms if desired. Evaluation will be based solely on a system's ability to answer questions correctly. Competitors will also be free to use additional publicly available math training questions, like AQuA or MAWPS; we ask only that competitors refrain from using additional Math SAT questions found on the web or elsewhere, to avoid potential train/test overlap.
+
+The logical forms are [here](https://github.com/allenai/semeval-2019-task-10/blob/master/interpreter/data/goldLogicalForms_closedAlgebra.json).
+
+We also provide an interpreter for these logical forms. For instructions on how to use the logical form interpreter, see the guide [here](https://github.com/allenai/semeval-2019-task-10/tree/master/interpreter).
 
 ### Evaluation
 
