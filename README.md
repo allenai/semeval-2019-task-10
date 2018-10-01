@@ -20,6 +20,10 @@ semeval-2019-task-10@googlegroups.com
 ### Quickstart
 Go [here](https://github.com/allenai/semeval-2019-task-10/blob/master/docs/gettingStarted.md) to get started.
 
+### The CodaLab competition page
+
+[https://competitions.codalab.org/competitions/20013]
+
 ### Task Overview
 
 Over the past four years, there has been a surge of interest in math question answering. In this SemEval task, we provide the opportunity for math QA systems to test themselves against a benchmark designed to evaluate high school students: The Math SAT (short for Scholastic Achievement Test).
